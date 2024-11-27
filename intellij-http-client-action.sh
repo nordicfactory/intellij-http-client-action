@@ -41,7 +41,7 @@ while IFS=$'\n' read -r file ; do
 done <<< "$INPUT_FILES"
 
 declare -a options
-
+flag options 'report' "${INPUT_REPORT}"
 option options 'socket-timeout' "${INPUT_SOCKET_TIMEOUT}"
 option options 'connect-timeout' "${INPUT_CONNECT_TIMEOUT}"
 flag options 'insecure' "${INPUT_INSECURE}"
@@ -57,7 +57,6 @@ option options 'proxy' "${INPUT_PROXY}"
 
 flag options 'docker-mode' "${INPUT_DOCKER_MODE}"
 option options 'log-level' "${INPUT_LOG_LEVEL}"
-flag options 'report' "${INPUT_REPORT}"
 
 (
   set -x;
