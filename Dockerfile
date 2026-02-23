@@ -1,4 +1,4 @@
-FROM jetbrains/intellij-http-client:253.30387.90
+FROM jetbrains/intellij-http-client:261.21525.39
 
 RUN apk add --no-cache bash
 
